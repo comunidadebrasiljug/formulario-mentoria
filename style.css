@@ -1,0 +1,225 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', Arial, sans-serif;
+}
+
+body {
+  background: #fff;
+  color: #333;
+  line-height: 1.6;
+}
+
+header {
+  background: linear-gradient(135deg, #003b25, #005b38);
+  color: white;
+  padding: 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+header img {
+  width: 200px;
+  height: auto;
+  border-radius: 50%;
+  background: white;
+  padding: 0.5rem;
+}
+
+header h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+header p {
+  font-size: 1.2rem;
+  max-width: 700px;
+}
+
+.cta {
+  margin-top: 1rem;
+}
+
+.cta a {
+  display: inline-block;
+  background: #fff;
+  color: #003b25;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s, color 0.3s;
+}
+
+.cta a:hover {
+  background: #ffd22f;
+  color: white;
+}
+
+section {
+  padding: 3rem 2rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+section h2,
+section p {
+  text-align: center;
+}
+
+.benefits {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.benefit {
+  background: #fafafa;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.benefit:hover {
+  transform: scale(1.05);
+}
+
+.benefit h3 {
+  color: #003b25;
+  margin-bottom: 0.5rem;
+}
+
+.benefit i {
+font-size: 2.5rem;
+color: #ff9800;
+margin-bottom: 15px;
+}
+
+/* === FORM === */
+.mentor-form {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #fafafa;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.mentor-form label {
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+  color: #333;
+}
+
+.mentor-form input,
+.mentor-form select,
+.mentor-form textarea {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border 0.2s, box-shadow 0.2s;
+}
+
+.mentor-form input:focus,
+.mentor-form select:focus,
+.mentor-form textarea:focus {
+  border-color: #003b25;
+  box-shadow: 0 0 0 3px rgba(244, 67, 54, 0.2);
+  outline: none;
+}
+
+.mentor-form button {
+  background: linear-gradient(135deg, #003b25, #005b38);
+  color: white;
+  font-size: 1.1rem;
+  font-weight: bold;
+  padding: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.3s;
+}
+
+.mentor-form button:hover {
+  transform: scale(1.03);
+  background: linear-gradient(135deg, #ffd22f, #ffde59);
+}
+
+/* === FOOTER === */
+footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+  margin-top: 2rem;
+}
+
+.social-links a {
+  color: white;
+  font-size: 2rem;
+  transition: color 0.3s;
+  margin: 0.5rem;
+}
+
+.social-links a:hover {
+  color: #ff9800; /* cor no hover */
+}
+
+/* === POPUP === */
+.popup-container {
+    display: none; /* Inicia oculto */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background-color: #fefefe;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+    border-radius: 10px;
+    position: relative;
+    animation: fadeIn 0.3s;
+}
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
